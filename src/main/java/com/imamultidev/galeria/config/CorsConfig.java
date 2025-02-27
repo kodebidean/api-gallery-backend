@@ -13,7 +13,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/api/**")
                 .allowedOrigins(
                     "http://localhost:5173",  // Para desarrollo local
-                    "https://tu-frontend-url.com" // URL de producción del frontend
+                    "https://galleryapirest.netlify.app"  // Tu dominio de Netlify
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
