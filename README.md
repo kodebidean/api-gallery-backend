@@ -10,6 +10,7 @@ API REST desarrollada con Spring Boot para gestionar una galería de imágenes u
 - Cloudinary
 - Swagger/OpenAPI
 
+
 ## Configuración
 
 1. Clonar el repositorio
@@ -32,7 +33,7 @@ mvn spring-boot:run
 ```
 
 
-La API estará disponible en `http://localhost:9090`
+La API estará disponible en `http://localhost:9090` (cambiar por el puerto que se haya configurado)
 
 ## Documentación
 
