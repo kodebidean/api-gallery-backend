@@ -11,7 +11,10 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(@NonNull CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:5173") // Puerto por defecto de Vite
+                .allowedOrigins(
+                    "http://localhost:5173",  // Para desarrollo local
+                    "https://tu-frontend-url.com" // URL de producción del frontend
+                )
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
