@@ -1,37 +1,47 @@
-# Galería de Imágenes - Frontend
+# Galería de Imágenes - Backend
 
-Aplicación web desarrollada con React y Material-UI para gestionar una galería de imágenes.
+API REST desarrollada con Spring Boot para gestionar una galería de imágenes utilizando Cloudinary como servicio de almacenamiento en la nube.
 
 ## Tecnologías
 
-- React 18
-- Vite
-- Material-UI
-- React Query
-- Axios
-- React Hot Toast
-
-## Características
-
-- Diseño responsivo
-- Tema oscuro elegante
-- Subida de imágenes con vista previa
-- Búsqueda de imágenes
-- Visualización en modal
-- Notificaciones toast
-
-## Instalación
-npm install
-                                                                                                                              ##Iniciar servidor de desarrollo
-npm run dev
-                                                                                                                              ##Construir para producción
-npm run build
-
-
-## Uso
-
-La aplicación estará disponible en `http://localhost:5173`
+- Java 17
+- Spring Boot 3.4.3
+- PostgreSQL
+- Cloudinary
+- Swagger/OpenAPI
 
 ## Configuración
 
-Asegúrate de que el backend esté corriendo en `http://localhost:9090` antes de iniciar el frontend.
+1. Clonar el repositorio
+2. Configurar la base de datos PostgreSQL
+3. Crear una cuenta en Cloudinary y obtener las credenciales
+4. Crear `application-dev.properties` con las siguientes propiedades:
+    
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5433/adat_uploadimage
+spring.datasource.username=tu_usuario
+spring.datasource.password=tu_contraseña
+cloudinary.cloud-name=tu_cloud_name
+cloudinary.api-key=tu_api_key
+cloudinary.api-secret=tu_api_secret
+```
+
+## Ejecución
+```bash
+mvn spring-boot:run
+```
+
+
+La API estará disponible en `http://localhost:9090`
+
+## Documentación
+
+La documentación de la API está disponible en:
+- Swagger UI: `http://localhost:9090/swagger-ui.html`
+- OpenAPI: `http://localhost:9090/v3/api-docs`
+
+## Licencia
+
+Distribuido bajo la licencia MIT. Ver [LICENSE](LICENSE) para más información.
+
+---
