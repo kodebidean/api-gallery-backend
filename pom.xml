@@ -13,10 +13,10 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.kodeleku</groupId>
-	<artifactId>api-series</artifactId>
+	<groupId>com.imamultidev</groupId>
+	<artifactId>galeria</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>api-series</name>
+	<name>galeria</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -90,6 +90,27 @@
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.imamultidev.galeria.GaleriaApplication</mainClass>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
